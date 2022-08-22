@@ -1,0 +1,72 @@
+<html>
+ <head>
+        <title>
+            |  Robot Control |
+        </title>
+		
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+   <body>
+	   <center>
+	                <button class="button" onclick="forward()">forward</button><br><br>
+	              	<button class="button" onclick="left()">left</button>
+					<button class="button" onclick="stop()">stop</button>
+					  <button class="button" onclick="right()">right</button><br><br>
+					<button class="button" onclick="backward()">backward</button>
+	   </center>
+    <script>
+           
+
+        /*    var apiKey, deviceId;// variable to store apiKey and devicId
+
+            apiKey = " "; // Enter your apiKey
+            deviceId = " "; // Enter your deviceId
+            if(apiKey == "" || deviceId == ""){
+                alert("Please enter an API KEY and a Device ID"); // it display alert
+            }
+            else{
+                alert("You are ready to play");
+            }*/
+
+            // function for move robot in forward direction
+            function forward(){
+			 var http = new XMLHttpRequest();
+            http.open("GET","http://localhost/control/task5.php?x="+"F"); 
+            http.send();
+            }
+
+            // function for move robot in backward direction
+            function backward(){
+			 var http = new XMLHttpRequest();
+            http.open("GET","http://localhost/control/task5.php?x="+"B");
+            http.send();
+            }
+
+            // function for move robot in right direction
+            function right(){
+			 var http = new XMLHttpRequest();
+            http.open("GET","http://localhost/control/task5.php?x="+"R");
+            http.send();
+            }
+
+            // function for move left in forward direction
+            function left(){
+			 var http = new XMLHttpRequest();
+            http.open("GET","http://localhost/control/task5.php?x="+"L");
+            http.send();
+            }
+
+            // function for stop robot
+            function stop(){
+			 var http = new XMLHttpRequest();
+            http.open("GET","http://localhost/control/task5.php?x="+"STOP");
+            http.send();
+            }
+            
+        </script> 
+
+           
+        
+        <script src="controller.js" type="text/javascript"></script>
+    </body>
+</html>
