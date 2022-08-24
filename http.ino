@@ -5,7 +5,7 @@ const char* ssid = "Vwoki-GUEST";
 const char* password = "";
 
 
-const string url = "https://s-m.com.sa/r2/test/cpanel/retrieve.php"; // or change to your PC's IP address "https://192.168.56.1/sensors/select.php"
+const string url = "https://s-m.com.sa/r2/test/cpanel/retrieve.php"; // or change to your PC's IP address "https://192.168.00.0/sensors/select.php"
 
 
 void setup() {
